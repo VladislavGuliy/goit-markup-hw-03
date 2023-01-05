@@ -15,6 +15,8 @@
   --black-color: #000000;
   --transparent-white-color: rgba(255, 255, 255, 0.6);
   --curiousblue-color: #188ce8;
+  --gallery-color: #eeeeee;
+  --shadow-color: rgba(0, 0, 0, 0.25);
 }
 
 body {
@@ -27,8 +29,17 @@ body {
   letter-spacing: 0.03em;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+  outline: 1px solid red;
+}
+
 .list {
   list-style: none;
+  margin: 0;
+  padding: 0;
 }
 
 /* Логотип */
@@ -71,6 +82,9 @@ body {
 
 .hero {
   background-color: var(--secondary-background-color);
+  text-align: center;
+  padding-top: 200px;
+  padding-bottom: 200px;
 }
 .hero-title {
   color: var(--primary-white-color);
@@ -78,9 +92,11 @@ body {
   font-weight: 900;
   font-size: 44px;
   line-height: 1.36;
-  text-align: center;
   letter-spacing: 0.06em;
   text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 30px;
 }
 
 /*  Секція  */
@@ -92,6 +108,12 @@ body {
   font-size: 36px;
   line-height: 1.17;
   text-align: center;
+
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.section .section-title {
+  margin-bottom: 50px;
 }
 
 /*  Якості  */
@@ -102,17 +124,31 @@ body {
   font-weight: 700;
   line-height: 1.14;
   text-transform: uppercase;
+
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+.qualities-list .text {
+  margin-top: 0;
+  margin-bottom: 0;
 }
 
 /*  Профіль  */
 
-.team-bg {
+.section.team-bg {
   background-color: var(--third-background-color);
-}
+  }
 .team-list .item {
   font-size: 16px;
   line-height: 1.19;
   text-align: center;
+
+  background-color: var(--primary-white-color);
+  width: 270px;
+  margin: 0 auto;
+  padding-bottom: 30px;
+  box-shadow: 0px 4px 4px var(--shadow-color);
+  border-radius: 0px 0px 4px 4px;
 }
 .team-list .title {
   color: var(--title-text-color);
@@ -121,10 +157,29 @@ body {
   font-size: inherit;
 }
 
+.team-list .image,
+.team-list .text,
+.team-list .title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.team-list .image {
+  margin-bottom: 30px;
+}
+.team-list .title {
+  margin-bottom: 10px;
+}
+
 /*  Футер  */
 
 .footer {
   background-color: var(--secondary-background-color);
+  padding-top: 60px;
+  padding-bottom: 60px;
+}
+.logo.indent {
+  display: inline-block;
+  margin-bottom: 28px;
 }
 .footer .logo-item {
   color: var(--primary-white-color);
@@ -137,6 +192,11 @@ body {
 .address-contact .link {
   color: var(--transparent-white-color);
   text-decoration: none;
+}
+.address-contact .item:first-child {
+  /* display: inline-block; */
+  margin-top: 12px;
+  margin-bottom: 12px;
 }
 
 .link:hover,
@@ -156,11 +216,18 @@ body {
   line-height: 1.89;
   letter-spacing: 0.06em;
   cursor: pointer;
+
+  border-radius: 4px;
+  filter: drop-shadow(0px 4px 4px var(--shadow-color));
 }
 
 .button.primary {
   background-color: var(--accent-color);
   color: var(--primary-white-color);
+
+  padding: 10px 24px;
+  border-width: 0;
+  min-width: 200px;
 }
 .button.primary:hover,
 .button.primary:focus {
@@ -170,13 +237,19 @@ body {
 /*  Портфоліо  */
 
 /*  Фільтр  */
-
+.filter {
+  margin-bottom: 50px;
+}
 .button.portfolio {
   background-color: var(--third-background-color);
 
   font-weight: 500;
   line-height: 1.62;
   letter-spacing: 0.03em;
+
+  padding: 6px 22px;
+  border-width: 0;
+  min-width: 67px;
 }
 .button.current,
 .button.portfolio:hover,
@@ -186,6 +259,13 @@ body {
 }
 
 /*  Роботи  */
+.works-list .item {
+  border: 1px solid var(--gallery-color);
+  background-color: var(--primary-white-color);
+  padding-bottom: 20px;
+  width: 370px;
+  margin: 0 auto;
+}
 .works-list .link {
   text-decoration: none;
 }
@@ -196,10 +276,20 @@ body {
   font-size: 18px;
   line-height: 2;
   letter-spacing: 0.06em;
-}
+
+  margin-top: 0;
+  margin-bottom: 4px;
+ }
 .works-list .text {
   color: var(--primary-text-color);
-  
+
   font-size: 16px;
   line-height: 1.88;
+  
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.works-list .image
+ {
+  margin-bottom: 20px;
 }
